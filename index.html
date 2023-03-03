@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleresto.css?v=03">
+    <title>simulatore cassa</title>
+   
+  </head>
+  <body>
+    <div id="immagine">
+      <img  src="./download.png">
+    </div>
+    <h2 id="testospesa"> La spesa intelligente </h2>
+
+    <h2 id="esitoResto"></h2>
+
+    <div class="buttons">
+      <div class="cassa">
+
+        <div class="calculator">
+          <div id="displayBox">
+            <span>
+              <label for="disPesa" >Tot. SPESA</label>
+              <div name="disPesa" class="displayprodotto" id="displayprodotto"></div> 
+            </span>
+            <span>
+              <label for="displayresto" >AVUTO</label>
+              <div class="display" id="display"></div>
+            </span>
+            <span>
+              <label for="displayresto" >RESTO</label>
+              <div class="displayresto" name="displayresto" id="displayresto"></div>
+            </span>
+          </div>
+        </div>
+        
+        <br>
+        <div class="button2" id="prodotto" onclick="randomPrice()">SCAN <br> SPESA</div>
+        
+        <div class="button" id="again" onclick="again()">NUOVO <br>CALC.</div>
+        <div class="button" id="vuoto"></div>
+        <div class="button" id="clear" onclick="clearDisplay()">C</div>
+        <div class="button" id="divide" onclick="updateDisplay('/')">/</div>
+
+        <div class="button" id="seven" onclick="updateDisplay('7')">7</div>
+        <div class="button" id="eight" onclick="updateDisplay('8')">8</div>
+        <div class="button" id="nine" onclick="updateDisplay('9')">9</div>
+
+        <div class="button" id="multiply" onclick="updateDisplay('*')">*</div>
+        <div class="button" id="four" onclick="updateDisplay('4')">4</div>
+        <div class="button" id="five" onclick="updateDisplay('5')">5</div>
+        <div class="button" id="six" onclick="updateDisplay('6')">6</div>
+        <div class="button" id="add" onclick="updateDisplay('+')">+</div>
+        <div class="button" id="one" onclick="updateDisplay('1')">1</div>
+        <div class="button" id="two" onclick="updateDisplay('2')">2</div>
+        <div class="button" id="three" onclick="updateDisplay('3')">3</div>
+        <div class="button" id="subtract" onclick="updateDisplay('-')">-</div>
+        <div class="button" id="decimal" onclick="updateDisplay('.')">.</div>
+        <div class="button" id="zero" onclick="updateDisplay('0')">0</div>
+        
+        <div class="button" id="equals" onclick="calculate()">=</div>
+
+        <button type="button" id="openCassa" onclick="apriCassa()">apri <br>cassa</button>
+        <audio id="myAudio">
+          <source src="./sounds/1.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+      </div>
+      
+
+      <div id="banconoteBox">
+        <div id="sfondoCassa" style="left: -9px;">CASSA</div>
+        <!-- <div id="apriCassTx"><h2>APRI CASSA</h2></div> -->
+
+        <button class="banconote" value="500" id="banconota500" type="button">
+          <img src="./img/500euro.png" alt="Button Image">
+        </button>
+        <button class="banconote" value="200" id="banconota200" type="button" >
+          <img src="./img/200euro.png" alt="Button Image">
+        </button>
+        <button class="banconote" value="100" id="banconota100" type="button" >
+          <img src="./img/100euro.png" alt="Button Image">
+        </button>
+        <button class="banconote" value="50" id="banconota50" type="button" >
+          <img src="./img/50euro.png" alt="Button Image">
+        </button>
+        
+        <button class="banconote" value="20" id="banconota20" type="button" >
+          <img src="./img/20euro.png" alt="Button Image">
+        </button>
+        <button class="banconote" value="10" id="banconota10" type="button" >
+          <img src="./img/10euro.png" alt="Button Image">
+        </button>
+        <button class="banconote" value="5" id="banconota5" type="button" >
+          <img src="./img/5euro.png" alt="Button Image">
+        </button>
+
+        <button class="banconote" value="2" id="moneta2" type="button" >
+          <img src="./img/2euro.png" alt="Button Image">
+        </button> 
+        <button class="banconote" value="1" id="moneta1" type="button" >
+          <img src="./img/1euro.png" alt="Button Image">
+        </button>
+        <button class="banconote" value="0.50" id="moneta50" type="button" >
+          <img src="./img/50cent.png" alt="Button Image">
+        </button>
+        <button class="banconote" value="0.20" id="moneta20" type="button" >
+          <img src="./img/20cent.png" alt="Button Image">
+        </button>
+        <button class="banconote" value="0.10" id="moneta10" type="button" >
+          <img src="./img/10cent.png" alt="Button Image">
+        </button>
+        
+        <button class="banconote" value="0.05" id="moneta05" type="button" >
+          <img src="./img/5cent.png" alt="Button Image">
+        </button>
+        <button class="banconote" value="0.02" id="moneta02" type="button" >
+          <img src="./img/2cent.png" alt="Button Image">
+        </button>
+        <button class="banconote" value="0.01" id="moneta01" type="button" >
+          <img src="./img/1cent.png" alt="Button Image">
+        </button>
+
+        <br>
+        <button type="button" style="background-color: rgb(255, 128, 0);" id="resetBanc" onclick="reset()">reset</button>
+
+
+        <button type="button" style="background-color: rgb(13, 133, 0);" id="vaiButt">vai</button>
+        
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,190 @@
+#cassa{
+    text-align: center;
+}
+
+#immagine{
+    text-align: center;
+    
+}
+
+#immagine img {
+    border-radius: 15px;
+    width: 150px; 
+}
+body{
+    background: #fdce30; 
+}
+#testospesa{
+    text-align: center;color: rgb(255, 255, 255);
+}
+
+
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#displayBox {
+    display: flex;
+    gap:4px ;
+    text-align: center;
+}
+#displayBox label{
+    font-weight: 900;
+}
+.display {
+    background-color: #ddd;
+    width: 90px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 12px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.displayprodotto {
+    background-color: #ddd;
+    width: 90px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 12px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.displayresto {
+    background-color: #ddd;
+    width: 90px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 12px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 60px;
+}
+.cassa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 350px;
+    height: 250px;
+    z-index: 20;
+}
+
+.button {
+    width: 75px;
+    height: 75px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button2 {
+    width: 75px;
+    height: 75px;
+    background-color: #41ef06;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#again {
+    font-size: 18px;
+    background-color: #2b72ac;
+    color: white;
+}
+
+#banconoteBox {
+    position: relative;
+    width: 520px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    background: #bcbcbc;
+    padding: 20px;
+}
+
+#esitoResto {
+    text-align: center;
+    margin: 0;
+    height: 35px;
+}
+
+/*--MONETE--*/
+#moneta01, #moneta02, #moneta05, #moneta10, #moneta20, #moneta50, #moneta1, #moneta2 {
+    background-color: transparent;
+    border: none;
+    width: 80px;
+    padding: 0;
+    cursor: pointer;
+}
+#banconota5, #banconota10, #banconota20, #banconota50, #banconota100, #banconota200, #banconota500{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+}
+
+.banconote img {
+    width: 100%;
+    object-fit: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.banconote img:hover {
+    width: 120%;
+}
+
+
+
+#sfondoCassa {
+    position: absolute;
+    width: 102%;
+    height: 102%;
+    z-index: 2;
+    background: #fdce30;
+    border-right: 3px solid #fff;
+    transition: 1.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 900;
+    color: whitesmoke;
+}
+
+#apriCassTx {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: 3;
+    color: white;
+    text-align: center;
+}
